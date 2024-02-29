@@ -129,3 +129,9 @@ I can create a new file called `.gitignore` and add my file/folder name in that
 - Model
 - View - Routes
 - Controller
+
+## Middlewares
+
+It can be used to perform various tasks such as logging, authentication, and data validation.
+
+They also have access to the `request` and `response`

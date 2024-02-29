@@ -1,6 +1,14 @@
 import { Router } from "express";
-import { handleResume } from "../controllers/resume.js";
+import {
+  addResumeData,
+  getResumeById,
+  handleResume,
+} from "../controllers/resume.js";
 
 export const router = Router();
 
-router.route("/").get(handleResume);
+router.route("/").get(handleResume).post(addResumeData);
+
+// Dynamic routes using :variableName
+// in express
+router.route("/:id").get(getResumeById);
