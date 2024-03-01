@@ -3,6 +3,7 @@ import express from "express";
 import { router } from "./routes/resume.js";
 import ExpressError from "./utils/ExpressError.js";
 import morgan from "morgan";
+import cors from "cors";
 
 // Create a new application using express
 const app = express();
@@ -13,6 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("combined"));
+
+app.use(cors());
 
 // Create a route/create a method - get, post, put, delete
 app.get("/", (req, res) => {

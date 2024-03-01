@@ -8,14 +8,26 @@ export const handleResume = (req, res) => {
   });
 };
 
+// CORS - Cross-origin Resource Sharing
 export const addResumeData = (req, res) => {
-  const { name, phoneNumber } = req.body;
+  const {
+    personalData,
+    workExperience,
+    projects,
+    education,
+    skills,
+    languages,
+  } = req.body;
 
   res.json({
     success: true,
     message: "Data for Resume Added",
-    name,
-    phoneNumber,
+    personalData,
+    workExperience,
+    projects,
+    education,
+    skills,
+    languages,
   });
 };
 
